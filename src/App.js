@@ -1,20 +1,15 @@
 const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div>
+      <div className="flex flex-col justify-center items-center h-screen bg-blue-500 ">
+        <h1 className="text-3xl font-bold underline">Hello world!</h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Exercitationem fuga ratione impedit ab ex iste minima explicabo enim
+          est perspiciatis tempore, rem recusandae facilis. Dolorem iste
+          obcaecati sint dicta corporis.
         </p>
-        <p>Hello Mohamed amine</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </div>
     </div>
   );
 };
