@@ -1,10 +1,10 @@
-import Header from "./components/Header.jsx";
+import Home from "./features/Home";
 
 const App = () => {
   return (
-    <div className="w-full">
-      <Header />
-    </div>
+    <>
+      <Home />
+    </>
   );
 };
 export default App;
