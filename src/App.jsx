@@ -1,12 +1,15 @@
-import {Button} from "@material-tailwind/react"
+import { BrowserRouter, Routes, Route } from "react-router";
+import Home from "./features/Home";
+import Docs from "./features/docs";
 
 const App = () => {
   return (
-    <div className="bg-blue-500 h-screen flex flex-col text-white justify-center items-center">
-       <h1 className="text-3xl font-bold underline text-white">Hello world!</h1>
-      <p>Thanks for development mode !!!</p>
-      <Button>Click ME</Button>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route index path="/" element={<Home />} />
+        <Route path="/docs" element={<Docs />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 export default App;
