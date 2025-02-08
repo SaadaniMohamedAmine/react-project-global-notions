@@ -4,3 +4,8 @@
 nav {
   width: 100% !important;
 }
+
+/* Scroll bar hide style */
+html::-webkit-scrollbar {
+  display: none;
+}
