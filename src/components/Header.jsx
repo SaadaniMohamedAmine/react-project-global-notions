@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router";
 import {
   Navbar,
@@ -95,14 +95,14 @@ const Header = () => {
   ];
 
   return (
-    <Navbar className="px-4 py-2 lg:px-8 lg:py-4 w-full navbar-width" fullWidth>
-      <div className="flex items-center justify-between text-black">
+    <Navbar className="px-4 py-2 lg:px-8 lg:py-4 w-full navbar-width bg-neutral-950 border-none text-white" fullWidth>
+      <div className="flex items-center justify-between text-white">
         <NavLink to="/">
           <Typography
             as="span"
-            className="mr-4 cursor-pointer py-1.5 font-medium"
+            className="mr-4 cursor-pointer py-1.5 font-medium text-orange-500 text-xl font-bold"
           >
-            My Appl
+            StreamAIServ
           </Typography>
         </NavLink>
         <div className="mr-4 hidden lg:block">{navList}</div>
@@ -115,9 +115,9 @@ const Header = () => {
               <Button
                 size="sm"
                 variant="outlined"
-                className="hidden items-center gap-2 lg:flex"
+                className="hidden items-center gap-2 lg:flex text-white border border-white"
               >
-                <span className="h-min text-base leading-none">
+                <span className="h-min text-base leading-none text-white">
                   {countries.find(({ name }) => name === lang)?.flag}
                 </span>
                 {countries.find(({ name }) => name === lang)?.name}
