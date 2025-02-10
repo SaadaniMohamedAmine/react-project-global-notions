@@ -7,7 +7,7 @@ const classes = (type) => {
     type === "primary"
       ? "!bg-orange-600 !hover:bg-orange-400 rounded-xl text-white font-medium px-4 py-3 transition cursor-pointer"
       : "",
-    type === "secondary" ? "bg-transparent rounded-xl text-white font-medium px-4 py-3 transition cursor-pointer border border-orange-500" : ""
+    type === "secondary" ? "bg-transparent rounded-xl text-white font-medium px-4 py-3 transition cursor-pointer border border-orange-500 focus:outline-none focus:ring-0" : ""
   );
 };
 

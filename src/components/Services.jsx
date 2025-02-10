@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 const Services = () => {
   return (
     <section className="bg-neutral-900">
@@ -36,16 +38,7 @@ const Services = () => {
                 <li>AI-Powered Basic SEO</li>
                 <li>Limited AI Chat Support</li>
               </ul>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                className="lemonsqueezy-button relative flex h-9 w-full items-center justify-center px-4 before:absolute before:inset-0 before:rounded-full before:bg-white before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
-                href="https://example.com/starter-plan"
-              >
-                <span className="relative text-sm font-semibold text-black">
-                  Get Started
-                </span>
-              </a>
+              <Button.Primary>See Into and check</Button.Primary>
             </div>
             <div className="flex flex-col items-center aspect-auto p-4 sm:p-8 border rounded-3xl bg-neutral-950 border-neutral-800 shadow-gray-600/10 shadow-none m-2 flex-1 max-w-md">
               <h2 className="text-lg sm:text-xl font-medium text-white mb-2">
@@ -61,16 +54,7 @@ const Services = () => {
                 <li>AI-Driven SEO & Performance Optimization</li>
                 <li>24/7 AI-Powered Support</li>
               </ul>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                className="lemonsqueezy-button relative flex h-9 w-full items-center justify-center px-4 before:absolute before:inset-0 before:rounded-full before:bg-white before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
-                href="https://example.com/pro-plan"
-              >
-                <span className="relative text-sm font-semibold text-black">
-                  Get Started
-                </span>
-              </a>
+              <Button.Primary>See Into and check</Button.Primary>
             </div>
             <div className="flex flex-col items-center aspect-auto p-4 sm:p-8 border rounded-3xl bg-neutral-950 border-neutral-800 shadow-gray-600/10 shadow-none m-2 flex-1 max-w-md">
               <h2 className="text-lg sm:text-xl font-medium text-white mb-2">
@@ -86,16 +70,7 @@ const Services = () => {
                 <li>AI-Enhanced Marketing & SEO Strategy</li>
                 <li>Priority AI & Human Hybrid Support</li>
               </ul>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                className="lemonsqueezy-button relative flex h-9 w-full items-center justify-center px-4 before:absolute before:inset-0 before:rounded-full before:bg-white before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
-                href="https://example.com/business-plan"
-              >
-                <span className="relative text-sm font-semibold text-black">
-                  Get Started
-                </span>
-              </a>
+              <Button.Primary>See Into and check</Button.Primary>
             </div>
           </div>
         </div>
