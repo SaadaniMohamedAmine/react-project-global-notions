@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 const Pricing = () => {
   return (
     <section className="py-6 leading-7 text-white sm:py-12 md:py-16 bg-neutral-900">
@@ -42,12 +44,7 @@ const Pricing = () => {
                 SiteFast Domain
               </li>
             </ul>
-            <a
-              href="#"
-              className="inline-flex justify-center w-full px-4 py-3 mt-8 font-sans text-sm leading-none text-center text-orange-500 no-underline bg-transparent border border-orange-500 rounded-md cursor-pointer hover:bg-blue-700 hover:border-blue-700 hover:text-white focus-within:bg-blue-700 focus-within:border-blue-700 focus-within:text-white sm:text-base md:text-lg"
-            >
-              Start Now
-            </a>
+            <Button.Secondary fullWidth>Start Now</Button.Secondary>
           </div>
           {/* <!-- Price 2 --> */}
           <div className="relative z-20 flex flex-col items-center max-w-md p-4 mx-auto my-0 bg-neutral-950 border-4 border-orange-500 border-solid rounded-lg sm:p-6 md:px-8 md:py-16">
@@ -58,7 +55,9 @@ const Pricing = () => {
               <p className="box-border m-0 text-6xl font-semibold leading-none border-solid">
                 $29
               </p>
-              <p className="box-border m-0 border-solid border border-white">/ month</p>
+              <p className="box-border m-0 border-solid border border-white">
+                / month
+              </p>
             </div>
             <ul className="flex-1 p-0 mt-4 ml-5 leading-7 text-white border-0 border-gray-200">
               <li className="inline-flex items-center block w-full mb-2 ml-5 font-semibold text-left border-solid">
@@ -78,12 +77,7 @@ const Pricing = () => {
               </li>
             </ul>
 
-            <a
-              href="#"
-              className="inline-flex justify-center w-full px-4 py-3 mt-8 font-sans text-sm leading-none text-center text-orange-500 no-underline bg-transparent border border-orange-500 rounded-md cursor-pointer hover:bg-blue-700 hover:border-blue-700 hover:text-white focus-within:bg-blue-700 focus-within:border-blue-700 focus-within:text-white sm:text-base md:text-lg"
-            >
-              Start Now
-            </a>
+            <Button.Primary fullWidth>Start Now</Button.Primary>
           </div>
           {/* <!-- Price 3 --> */}
           <div className="relative z-10 flex flex-col items-center max-w-md p-4 mx-auto my-0 border border-solid rounded-lg lg:-ml-3 sm:my-0 sm:p-6 md:my-8 md:p-8">
@@ -124,12 +118,7 @@ const Pricing = () => {
                 Email Integration
               </li>
             </ul>
-            <a
-              href="#"
-              className="inline-flex justify-center w-full px-4 py-3 mt-8 font-sans text-sm leading-none text-center text-orange-500 no-underline bg-transparent border border-orange-500 rounded-md cursor-pointer hover:bg-blue-700 hover:border-blue-700 hover:text-white focus-within:bg-blue-700 focus-within:border-blue-700 focus-within:text-white sm:text-base md:text-lg"
-            >
-              Start Now
-            </a>
+            <Button.Secondary fullWidth>Start Now</Button.Secondary>
           </div>
         </div>
       </div>
