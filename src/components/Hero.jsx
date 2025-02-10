@@ -1,9 +1,11 @@
+import Button from "../components/Button.jsx";
+
 const Hero = () => {
   return (
     <div className="bg-neutral-950 text-white">
       <div className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 py-20 ">
         <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal text-white-300 dark:text-gray-300 sm:text-7xl">
-          Revolutionize Your Streamlined  
+          Revolutionize Your Streamlined
           <span className="relative whitespace-nowrap text-white-600 dark:text-gray-300">
             &nbsp; Services
           </span>
@@ -19,17 +21,12 @@ const Hero = () => {
             <span className="relative">with AI</span>
           </span>
         </h1>
-        <h2 className="mx-auto mt-12 max-w-xl text-lg sm:text-white-400 text-white-500 dark:text-gray-300 leading-7">
-          Experience the future of Streamlined Services with our cutting-edge AI tool. From
-          underwriting to claims processing, our intelligent system streamlines
-          and enhances every aspect of your Services Operations.
+        <h2 className="mx-auto my-10 mb-10 max-w-xl text-lg sm:text-white-400 text-white-500 dark:text-gray-300 leading-7">
+          Experience the future of Streamlined Services with our cutting-edge AI
+          tool. From underwriting to claims processing, our intelligent system
+          streamlines and enhances every aspect of your Services Operations.
         </h2>
-        <a
-          className="bg-orange-600 dark:bg-gray-800 rounded-xl text-white dark:text-gray-300 font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-orange-500 dark:hover:bg-gray-600 transition"
-          href=""
-        >
-          Get started
-        </a>
+        <Button.Primary size="xl">Get Started</Button.Primary>
       </div>
     </div>
   );

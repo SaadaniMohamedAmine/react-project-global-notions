@@ -95,7 +95,10 @@ const Header = () => {
   ];
 
   return (
-    <Navbar className="px-4 py-2 lg:px-8 lg:py-4 w-full navbar-width bg-neutral-950 border-none text-white" fullWidth>
+    <Navbar
+      className="px-4 py-2 lg:px-8 lg:py-4 w-full navbar-width bg-neutral-950 border-none text-white"
+      fullWidth
+    >
       <div className="flex items-center justify-between text-white">
         <NavLink to="/">
           <Typography
