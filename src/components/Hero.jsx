@@ -1,6 +1,14 @@
+import { useState } from "react";
+import { IconButton } from "@material-tailwind/react";
 import Button from "../components/Button.jsx";
+// import { Modal } from "./Modal.jsx";
+import { Modal } from "./Modal.jsx";
 
 const Hero = () => {
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = () => setOpen((cur) => !cur);
+
   return (
     <div className="bg-neutral-950 text-white">
       <div className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 py-20 ">
@@ -26,7 +34,82 @@ const Hero = () => {
           tool. From underwriting to claims processing, our intelligent system
           streamlines and enhances every aspect of your Services Operations.
         </h2>
-        <Button.Primary size="xl">Get Started</Button.Primary>
+        <Button.Primary size="xl" onClick={handleOpen}>
+          Get Started
+        </Button.Primary>
+        {/* <Modal openModal={open} handler={handleOpen}>
+          <Modal.Header>
+            <div className="flex justify-between items-center w-full">
+              <h1>Hello from this modal ! </h1>
+              <IconButton
+                color="blue-gray"
+                className="cursor-pointer"
+                size="sm"
+                variant="text"
+                onClick={handleOpen}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  className="h-5 w-5"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </IconButton>
+            </div>
+          </Modal.Header>
+          <Modal.Body>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Repellendus, dolores quam nostrum suscipit obcaecati beatae, fuga
+            aliquam eum mollitia in maiores? Officiis amet quo debitis dicta
+            necessitatibus a earum sapiente.
+          </Modal.Body>
+          <Modal.Footer>Thanks for your attention !!!!</Modal.Footer>
+        </Modal> */}
+        <Modal open={open} handleOpen={handleOpen}>
+          <Modal.Header>
+            <div>Iam the header</div>
+            <IconButton
+              color="blue-gray"
+              size="sm"
+              variant="text"
+              onClick={handleOpen}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+                className="h-5 w-5"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </IconButton>
+          </Modal.Header>
+          <Modal.Body>
+            <div className="mb-6">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt
+              aspernatur neque quas magni, obcaecati quaerat aliquam adipisci
+              veniam? Ea, saepe. Ab rerum accusantium nam, dicta voluptatibus
+              nostrum vitae id incidunt.
+            </div>
+          </Modal.Body>
+          <Modal.Footer>
+            <div>I am the footer</div>
+          </Modal.Footer>
+        </Modal>
       </div>
     </div>
   );
