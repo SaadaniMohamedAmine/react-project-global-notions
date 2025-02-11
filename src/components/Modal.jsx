@@ -1,4 +1,4 @@
-// import React from "react";
+import { useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import {
   Dialog,
@@ -30,10 +30,14 @@ ModalFooter.propTypes = {
 };
 
 export const Modal = ({ open, handleOpen, children }) => {
+  const dialog = useRef();
+  useEffect(() => {
+    dialog.current;
+  }, [dialog]);
   return (
     <>
-      <Dialog size="xs" open={open} handler={handleOpen}>
-       {children}
+      <Dialog size="md" open={open} handler={handleOpen}>
+        {children}
       </Dialog>
     </>
   );
