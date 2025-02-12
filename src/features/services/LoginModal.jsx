@@ -9,7 +9,7 @@ const LoginModal = ({ service, handleOpen }) => {
   return (
     <Modal open={service === serviceName} handleOpen={handleOpen}>
       <Modal.Header>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center w-full">
           <h1 className="text-bold text-xl text-black">
             Hello from the login modal
           </h1>
@@ -18,6 +18,7 @@ const LoginModal = ({ service, handleOpen }) => {
             size="sm"
             variant="text"
             onClick={handleOpen}
+            className="cursor-pointer"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

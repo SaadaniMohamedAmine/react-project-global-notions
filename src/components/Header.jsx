@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink, useSearchParams } from "react-router";
+import { NavLink, useNavigate } from "react-router";
 import { Navbar, Typography, IconButton } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Button from "./Button";
@@ -7,12 +7,10 @@ import Button from "./Button";
 const Header = () => {
   // const [openMenu, setOpenMenu] = useState(false);
   const [openNav, setOpenNav] = useState(false);
-  const [searchParams, setSearchParams] = useSearchParams();
-  const openLoginModal =() =>  {
-    console.log("Start !!!")
-    searchParams.set("service", "login")
-    setSearchParams(searchParams)
-  }
+  const navigate = useNavigate();
+  const openLoginModal = () => {
+    navigate("/?service=login")
+  };
 
   return (
     <Navbar
