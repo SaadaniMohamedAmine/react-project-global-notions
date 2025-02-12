@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router";
+import { NavLink, useNavigate } from "react-router";
 import { Navbar, Typography, IconButton } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Button from "./Button";
@@ -7,6 +7,10 @@ import Button from "./Button";
 const Header = () => {
   // const [openMenu, setOpenMenu] = useState(false);
   const [openNav, setOpenNav] = useState(false);
+  const navigate = useNavigate();
+  const openLoginModal = () => {
+    navigate("/?service=login")
+  };
 
   return (
     <Navbar
@@ -23,7 +27,7 @@ const Header = () => {
           </Typography>
         </NavLink>
         <div className="flex gap-5">
-          <Button.Primary>Sign In</Button.Primary>
+          <Button.Primary onClick={openLoginModal}>Sign In</Button.Primary>
           <Button.Secondary>Join Us</Button.Secondary>
         </div>
         <IconButton
