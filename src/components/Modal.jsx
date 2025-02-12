@@ -29,14 +29,14 @@ ModalFooter.propTypes = {
   children: PropTypes.element,
 };
 
-export const Modal = ({ open, handleOpen, children }) => {
+export const Modal = ({ open, handleOpen, children, size }) => {
   const dialog = useRef();
   useEffect(() => {
     dialog.current;
   }, [dialog]);
   return (
     <>
-      <Dialog size="md" open={open} handler={handleOpen}>
+      <Dialog size={size} open={open} handler={handleOpen}>
         {children}
       </Dialog>
     </>
@@ -46,12 +46,14 @@ export const Modal = ({ open, handleOpen, children }) => {
 Modal.defaultProps = {
   open: false,
   handleOpen: Function.prototype,
+  size: "md",
 };
 
 Modal.propTypes = {
   open: PropTypes.bool,
   handleOpen: PropTypes.func,
   children: PropTypes.element.isRequired,
+  size: PropTypes.string,
 };
 
 Modal.Header = ModalHeader;

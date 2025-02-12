@@ -7,7 +7,7 @@ const serviceName = "login";
 const LoginModal = ({ service, handleOpen }) => {
   console.log("Hello from the login modal");
   return (
-    <Modal open={service === serviceName} handleOpen={handleOpen}>
+    <Modal open={service === serviceName} handleOpen={handleOpen} size="xs">
       <Modal.Header>
         <div className="flex justify-between items-center w-full">
           <h1 className="text-bold text-xl text-black">
