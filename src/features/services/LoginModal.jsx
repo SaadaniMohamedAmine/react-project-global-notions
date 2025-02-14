@@ -1,53 +1,83 @@
 import PropTypes from "prop-types";
-import { IconButton } from "@material-tailwind/react";
+import {
+  IconButton,
+  Typography,
+  // Input,
+  Checkbox,
+} from "@material-tailwind/react";
 import { Modal } from "../../components/Modal";
+import Input from "../../components/Input.jsx";
+import Button from "../../components/Button.jsx";
 
 const serviceName = "login";
 
 const LoginModal = ({ service, handleOpen }) => {
-  console.log("Hello from the login modal");
   return (
-    <Modal open={service === serviceName} handleOpen={handleOpen}>
-      <Modal.Header>
-        <div className="flex justify-between items-center w-full">
-          <h1 className="text-bold text-xl text-black">
-            Hello from the login modal
-          </h1>
-          <IconButton
-            color="blue-gray"
-            size="sm"
-            variant="text"
-            onClick={handleOpen}
-            className="cursor-pointer"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-              className="h-5 w-5"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </IconButton>
-        </div>
-      </Modal.Header>
+    <Modal open={service === serviceName} handleOpen={handleOpen} size="xs">
       <Modal.Body>
-        <div className="mb-6">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt
-          aspernatur neque quas magni, obcaecati quaerat aliquam adipisci
-          veniam? Ea, saepe. Ab rerum accusantium nam, dicta voluptatibus
-          nostrum vitae id incidunt.
+        <div className="mx-auto w-full max-w-[24rem]">
+          <div className="flex flex-col gap-4">
+            <div className="flex justify-between items-center w-full">
+              <Typography variant="h4" color="blue-gray">
+                Sign In
+              </Typography>
+              <IconButton
+                color="orange"
+                size="sm"
+                variant="text"
+                onClick={handleOpen}
+                className="cursor-pointer"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  className="h-5 w-5"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </IconButton>
+            </div>
+            <div>
+            <Typography className="my-2" variant="h6">
+              Your Email
+            </Typography>
+            <Input label="Email" size="lg" />
+            <Typography className="my-2" variant="h6">
+              Your Password
+            </Typography>
+            <Input label="Password" size="lg" />
+            </div>
+            <div className="-ml-2.5 -mt-3">
+              <Checkbox label="Remember Me" />
+            </div>
+          </div>
+          <div className="pt-0">
+            <Button.Primary variant="gradient" onClick={handleOpen} fullWidth>
+              Sign In
+            </Button.Primary>
+            <Typography variant="small" className="mt-4 flex justify-center">
+              Don&apos;t have an account?
+              <Typography
+                as="a"
+                href="#signup"
+                variant="small"
+                color="blue-gray"
+                className="ml-1 font-bold"
+                onClick={handleOpen}
+              >
+                Sign up
+              </Typography>
+            </Typography>
+          </div>
         </div>
       </Modal.Body>
-      <Modal.Footer>
-        <div>I am the footer</div>
-      </Modal.Footer>
     </Modal>
   );
 };
