@@ -1,13 +1,13 @@
 import PropTypes from "prop-types";
 import {
   IconButton,
-  Button,
   Typography,
   // Input,
   Checkbox,
 } from "@material-tailwind/react";
 import { Modal } from "../../components/Modal";
 import Input from "../../components/Input.jsx";
+import Button from "../../components/Button.jsx";
 
 const serviceName = "login";
 
@@ -22,7 +22,7 @@ const LoginModal = ({ service, handleOpen }) => {
                 Sign In
               </Typography>
               <IconButton
-                color="blue-gray"
+                color="orange"
                 size="sm"
                 variant="text"
                 onClick={handleOpen}
@@ -44,30 +44,24 @@ const LoginModal = ({ service, handleOpen }) => {
                 </svg>
               </IconButton>
             </div>
-            <Typography
-              className="mb-3 font-normal"
-              variant="paragraph"
-              color="gray"
-            >
-              Enter your email and password to Sign In.
-            </Typography>
-            <Typography className="-mb-2" variant="h6">
+            <div>
+            <Typography className="my-2" variant="h6">
               Your Email
             </Typography>
-            <Input />
-            {/* <Input label="Email" variant="outlined"/> */}
-            <Typography className="-mb-2" variant="h6">
+            <Input label="Email" size="lg" />
+            <Typography className="my-2" variant="h6">
               Your Password
             </Typography>
-            {/* <Input label="Password" /> */}
+            <Input label="Password" size="lg" />
+            </div>
             <div className="-ml-2.5 -mt-3">
               <Checkbox label="Remember Me" />
             </div>
           </div>
           <div className="pt-0">
-            <Button variant="gradient" onClick={handleOpen} fullWidth>
+            <Button.Primary variant="gradient" onClick={handleOpen} fullWidth>
               Sign In
-            </Button>
+            </Button.Primary>
             <Typography variant="small" className="mt-4 flex justify-center">
               Don&apos;t have an account?
               <Typography
