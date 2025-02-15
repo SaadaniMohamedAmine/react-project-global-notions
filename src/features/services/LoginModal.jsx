@@ -5,6 +5,7 @@ import { Modal } from "../../components/Modal";
 import Input from "../../components/Input.jsx";
 import Button from "../../components/Button.jsx";
 import Checkbox from "../../components/checkbox.jsx";
+import Switch from "../../components/Switch.jsx";
 
 const serviceName = "login";
 
@@ -13,6 +14,12 @@ const LoginModal = ({ service, handleOpen }) => {
   const handleCheck = (e) => {
     setIsChecked(e.target.checked);
   };
+  const [toggle, setToggle] = useState(false);
+  const handleToggle = (e) => {
+    setToggle(e.target.checked);
+    console.log("Switch state:", e.target.checked);
+  };
+
   return (
     <Modal open={service === serviceName} handleOpen={handleOpen} size="xs">
       <Modal.Body>
@@ -63,6 +70,15 @@ const LoginModal = ({ service, handleOpen }) => {
                 onChange={handleCheck}
                 defaultChecked={false}
               />
+              <div className="p-5 my-3">
+                <Switch
+                  label="Automatic Update"
+                  color="orange"
+                  checked={toggle}
+                  onChange={handleToggle}
+                  className="bg-orange-300"
+                />
+              </div>
             </div>
           </div>
           <div className="pt-0">
