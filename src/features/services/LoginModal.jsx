@@ -1,17 +1,18 @@
+import { useState } from "react";
 import PropTypes from "prop-types";
-import {
-  IconButton,
-  Typography,
-  // Input,
-  Checkbox,
-} from "@material-tailwind/react";
+import { IconButton, Typography } from "@material-tailwind/react";
 import { Modal } from "../../components/Modal";
 import Input from "../../components/Input.jsx";
 import Button from "../../components/Button.jsx";
+import Checkbox from "../../components/checkbox.jsx";
 
 const serviceName = "login";
 
 const LoginModal = ({ service, handleOpen }) => {
+  const [isChecked, setIsChecked] = useState(false);
+  const handleCheck = (e) => {
+    setIsChecked(e.target.checked);
+  };
   return (
     <Modal open={service === serviceName} handleOpen={handleOpen} size="xs">
       <Modal.Body>
@@ -45,17 +46,23 @@ const LoginModal = ({ service, handleOpen }) => {
               </IconButton>
             </div>
             <div>
-            <Typography className="my-2" variant="h6">
-              Your Email
-            </Typography>
-            <Input label="Email" size="lg" />
-            <Typography className="my-2" variant="h6">
-              Your Password
-            </Typography>
-            <Input label="Password" size="lg" />
+              <Typography className="my-2" variant="h6">
+                Your Email
+              </Typography>
+              <Input label="Email" size="lg" />
+              <Typography className="my-2" variant="h6">
+                Your Password
+              </Typography>
+              <Input label="Password" size="lg" />
             </div>
             <div className="-ml-2.5 -mt-3">
-              <Checkbox label="Remember Me" />
+              <Checkbox
+                color="orange"
+                label="Remember Me"
+                checked={isChecked}
+                onChange={handleCheck}
+                defaultChecked={false}
+              />
             </div>
           </div>
           <div className="pt-0">
