@@ -1,16 +1,20 @@
+import { useState } from "react";
 import { Modal } from "../../components/Modal.jsx";
 import PropTypes from "prop-types";
-import {
-  IconButton,
-  Typography,
-} from "@material-tailwind/react";
+import { IconButton, Typography } from "@material-tailwind/react";
 import { useCountries } from "use-react-countries";
 import Select from "../../components/Select.jsx";
+
 
 const serviceName = "register";
 
 const RegisterModal = ({ service, handleOpen }) => {
   const { countries } = useCountries();
+  const [selectedCountry, setSelectedCountry] = useState("");
+  const handleSelectCountry = (value) => {
+    setSelectedCountry(value);
+    console.log("Selected Country:", selectedCountry);
+  };
   return (
     <Modal open={service === serviceName} handleOpen={handleOpen} size="xs">
       <Modal.Body>
@@ -47,7 +51,13 @@ const RegisterModal = ({ service, handleOpen }) => {
               <Typography variant="h6" color="blue-gray" className="my-3">
                 Please select your country
               </Typography>
-             <Select size="lg" label="Country" data={countries}  className="cursor-pointer"/>
+              <Select
+                size="lg"
+                label="Country"
+                data={countries}
+                className="cursor-pointer"
+                onChange={handleSelectCountry}
+              />
             </div>
           </div>
         </div>
