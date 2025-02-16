@@ -1,11 +1,16 @@
 import { Modal } from "../../components/Modal.jsx";
 import PropTypes from "prop-types";
-import { IconButton, Typography } from "@material-tailwind/react";
-
+import {
+  IconButton,
+  Typography,
+} from "@material-tailwind/react";
+import { useCountries } from "use-react-countries";
+import Select from "../../components/Select.jsx";
 
 const serviceName = "register";
 
 const RegisterModal = ({ service, handleOpen }) => {
+  const { countries } = useCountries();
   return (
     <Modal open={service === serviceName} handleOpen={handleOpen} size="xs">
       <Modal.Body>
@@ -38,11 +43,11 @@ const RegisterModal = ({ service, handleOpen }) => {
                 </svg>
               </IconButton>
             </div>
-            <div>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,
-              obcaecati voluptate? Dolore, impedit culpa. Dolore, nulla
-              accusamus quasi, incidunt alias impedit quis nisi enim, dolorem
-              explicabo rerum eum voluptatibus magnam.
+            <div className="my-5">
+              <Typography variant="h6" color="blue-gray" className="my-3">
+                Please select your country
+              </Typography>
+             <Select size="lg" label="Country" data={countries}  className="cursor-pointer"/>
             </div>
           </div>
         </div>
