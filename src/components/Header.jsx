@@ -11,6 +11,9 @@ const Header = () => {
   const openLoginModal = () => {
     navigate("/?service=login")
   };
+  const openRegisterModal = () => {
+    navigate("/?service=register")
+  };
 
   return (
     <Navbar
@@ -28,7 +31,7 @@ const Header = () => {
         </NavLink>
         <div className="flex gap-5">
           <Button.Primary onClick={openLoginModal}>Sign In</Button.Primary>
-          <Button.Secondary>Join Us</Button.Secondary>
+          <Button.Secondary onClick={openRegisterModal}>Join Us</Button.Secondary>
         </div>
         <IconButton
           variant="text"

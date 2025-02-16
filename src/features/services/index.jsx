@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router";
 import LoginModal from "./LoginModal";
+import RegisterModal from "./RegisterModal";
 
 const ModalContainer = () => {
   const [activeTab, setActiveTab] = useState("");
@@ -26,6 +27,8 @@ const ModalContainer = () => {
   return (
     <>
       <LoginModal service={service} handleOpen={handleOpen} />
+      <RegisterModal service={service} handleOpen={handleOpen} />
+
     </>
   );
 };
