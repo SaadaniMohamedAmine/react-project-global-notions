@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import {Helmet} from "react-helmet"
 import { useSearchParams } from "react-router";
 import LoginModal from "./LoginModal";
 import RegisterModal from "./RegisterModal";
@@ -25,6 +26,11 @@ const ModalContainer = () => {
 
   return (
     <>
+     <Helmet>
+        <meta charSet="utf-8" />
+        <title>StreamAIServ</title>
+        <link rel="icon" type="image/svg+xml" href="/icon-removebg-preview.png" />
+      </Helmet>
       <LoginModal service={service} handleOpen={handleOpen} />
       <RegisterModal service={service} handleOpen={handleOpen} />
 
