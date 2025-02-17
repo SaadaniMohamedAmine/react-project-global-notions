@@ -1,11 +1,12 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import { IconButton, Typography } from "@material-tailwind/react";
+import { IconButton } from "@material-tailwind/react";
 import { Modal } from "../../components/Modal";
 import Input from "../../components/Input.jsx";
 import Button from "../../components/Button.jsx";
 import Checkbox from "../../components/checkbox.jsx";
 import Switch from "../../components/Switch.jsx";
+import Text from "../../components/Text.jsx";
 
 const serviceName = "login";
 
@@ -26,9 +27,9 @@ const LoginModal = ({ service, handleOpen }) => {
         <div className="mx-auto w-full max-w-[24rem]">
           <div className="flex flex-col gap-4">
             <div className="flex justify-between items-center w-full">
-              <Typography variant="h4" color="blue-gray">
+              <Text variant="h4" color="blue-gray">
                 Sign In
-              </Typography>
+              </Text>
               <IconButton
                 color="orange"
                 size="sm"
@@ -53,13 +54,13 @@ const LoginModal = ({ service, handleOpen }) => {
               </IconButton>
             </div>
             <div>
-              <Typography className="my-2" variant="h6">
+              <Text className="my-2" variant="h6">
                 Your Email
-              </Typography>
+              </Text>
               <Input label="Email" size="lg" />
-              <Typography className="my-2" variant="h6">
+              <Text className="my-2" variant="h6">
                 Your Password
-              </Typography>
+              </Text>
               <Input label="Password" size="lg" />
             </div>
             <div className="-ml-2.5 -mt-3">
@@ -85,9 +86,9 @@ const LoginModal = ({ service, handleOpen }) => {
             <Button.Primary variant="gradient" onClick={handleOpen} fullWidth>
               Sign In
             </Button.Primary>
-            <Typography variant="small" className="mt-4 flex justify-center">
+            <Text variant="small" className="mt-4 flex justify-center">
               Don&apos;t have an account?
-              <Typography
+              <Text
                 as="a"
                 href="#signup"
                 variant="small"
@@ -96,8 +97,8 @@ const LoginModal = ({ service, handleOpen }) => {
                 onClick={handleOpen}
               >
                 Sign up
-              </Typography>
-            </Typography>
+              </Text>
+            </Text>
           </div>
         </div>
       </Modal.Body>
