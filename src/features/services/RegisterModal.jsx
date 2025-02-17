@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Modal } from "../../components/Modal.jsx";
 import PropTypes from "prop-types";
-import { IconButton, Typography } from "@material-tailwind/react";
+import { IconButton } from "@material-tailwind/react";
 import { useCountries } from "use-react-countries";
 import Select from "../../components/Select.jsx";
+import Text from "../../components/Text.jsx";
 
 
 const serviceName = "register";
@@ -21,9 +22,9 @@ const RegisterModal = ({ service, handleOpen }) => {
         <div className="mx-auto w-full max-w-[24rem]">
           <div className="flex flex-col gap-4">
             <div className="flex justify-between items-center w-full">
-              <Typography variant="h4" color="blue-gray">
+              <Text variant="h4" color="blue-gray">
                 Sign Up
-              </Typography>
+              </Text>
               <IconButton
                 color="orange"
                 size="sm"
@@ -48,9 +49,9 @@ const RegisterModal = ({ service, handleOpen }) => {
               </IconButton>
             </div>
             <div className="my-5">
-              <Typography variant="h6" color="blue-gray" className="my-3">
+              <Text variant="h6" color="blue-gray" className="my-3">
                 Please select your country
-              </Typography>
+              </Text>
               <Select
                 size="lg"
                 label="Country"

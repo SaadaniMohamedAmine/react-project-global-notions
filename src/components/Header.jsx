@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { NavLink, useNavigate } from "react-router";
-import { Navbar, Typography, IconButton } from "@material-tailwind/react";
+import { Navbar, IconButton } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Button from "./Button";
+import Text from "./Text.jsx";
 
 const Header = () => {
   // const [openMenu, setOpenMenu] = useState(false);
@@ -22,12 +23,12 @@ const Header = () => {
     >
       <div className="flex items-center justify-between text-white">
         <NavLink to="/">
-          <Typography
+          <Text
             as="span"
             className="mr-4 cursor-pointer py-1.5 font-medium text-orange-500 text-xl font-bold"
           >
             StreamAIServ
-          </Typography>
+          </Text>
         </NavLink>
         <div className="flex gap-5">
           <Button.Primary onClick={openLoginModal}>Sign In</Button.Primary>
