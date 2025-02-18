@@ -7,7 +7,12 @@ const classes = (type) => {
     type === "primary"
       ? "!bg-orange-600 !hover:bg-orange-400 rounded-xl text-white font-medium px-4 py-3 transition cursor-pointer"
       : "",
-    type === "secondary" ? "bg-transparent rounded-xl text-white font-medium px-4 py-3 transition cursor-pointer border border-orange-500 focus:outline-none focus:ring-0" : ""
+    type === "secondary"
+      ? "bg-transparent rounded-xl text-white font-medium px-4 py-3 transition cursor-pointer border border-orange-500 focus:outline-none focus:ring-0"
+      : "",
+      type === "tertiary"
+      ? "cursor-pointer px-2 py-2 hover:!bg-transparent rounded-none text-black transition cursor-pointer border-b-2 border-transparent hover:border-orange-500 focus:border-b-2 focus:border-orange-500 active:border-b-2 active:border-orange-500"
+      : ""
   );
 };
 
@@ -82,13 +87,31 @@ const SecondaryButton = ({ children, size, onClick, disabled, fullWidth }) => {
 SecondaryButton.propTypes = MTButton.propTypes;
 SecondaryButton.defaultProps = MTButton.defaultProps;
 
+const TertiaryButton = ({ children, size, onClick, disabled, fullWidth }) => {
+  // console.log("type is Primary");
+  return (
+    <MTButton
+      type="tertiary"
+      size={size}
+      onClick={onClick}
+      disabled={disabled}
+      fullWidth={fullWidth}
+    >
+      {children}
+    </MTButton>
+  );
+};
+TertiaryButton.propTypes = MTButton.propTypes;
+TertiaryButton.defaultProps = MTButton.defaultProps;
+
 const Button = {
   Primary: PrimaryButton,
-  Secondary: SecondaryButton
+  Secondary: SecondaryButton,
+  Tertiary: TertiaryButton
 };
 
 Button.Primary = PrimaryButton;
 Button.Secondary = SecondaryButton;
-
+Button.Tertiary = TertiaryButton
 
 export default Button;
