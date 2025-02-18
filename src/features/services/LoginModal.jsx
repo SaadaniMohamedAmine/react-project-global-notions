@@ -11,6 +11,7 @@ import Checkbox from "../../components/checkbox.jsx";
 // import Switch from "../../components/Switch.jsx";
 import Text from "../../components/Text.jsx";
 import loginSchema from "../../schemas/loginSchema.jsx";
+import { showToast } from "../../helper.jsx";
 
 const serviceName = "login";
 
@@ -29,6 +30,8 @@ const LoginModal = ({ service, handleOpen }) => {
   const handleSubmitLogin = (data) => {
     console.log("The login data is", data);
     reset();
+    showToast("Welcome in StreamAIServ !", "Hello Mohamed ! Happy you get here !", "error")
+    handleOpen();
   };
 
   const [isChecked, setIsChecked] = useState(false);
