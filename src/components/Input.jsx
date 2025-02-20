@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { Input as MTInput } from "@material-tailwind/react";
 
 const Input = ({ label, size, value, onChange, type, success, error, rest, id }) => {
+  console.log("the value of the error is :", error)
   return (
     <MTInput
       label={label}
