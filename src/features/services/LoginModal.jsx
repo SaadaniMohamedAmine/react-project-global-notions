@@ -30,7 +30,11 @@ const LoginModal = ({ service, handleOpen }) => {
   const handleSubmitLogin = (data) => {
     console.log("The login data is", data);
     reset();
-    showToast("Welcome in StreamAIServ !", "Hello Mohamed ! Happy you get here !", "error")
+    showToast(
+      "Welcome in StreamAIServ !",
+      "Hello Mohamed ! Happy you get here !",
+      "success"
+    );
     handleOpen();
   };
 
@@ -96,7 +100,7 @@ const LoginModal = ({ service, handleOpen }) => {
                     id="email"
                     name="email"
                     {...field}
-                    error={formState.email?.message}
+                    error={formState?.email}
                   />
                 )}
               />

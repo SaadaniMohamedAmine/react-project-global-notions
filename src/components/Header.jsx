@@ -1,19 +1,16 @@
-import { useState } from "react";
 import { NavLink, useNavigate } from "react-router";
-import { Navbar, IconButton } from "@material-tailwind/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Navbar,  } from "@material-tailwind/react";
 import Button from "./Button";
 import Text from "./Text.jsx";
 
 const Header = () => {
   // const [openMenu, setOpenMenu] = useState(false);
-  const [openNav, setOpenNav] = useState(false);
   const navigate = useNavigate();
   const openLoginModal = () => {
-    navigate("/?service=login")
+    navigate("/?service=login");
   };
   const openRegisterModal = () => {
-    navigate("/?service=register")
+    navigate("/?service=register");
   };
 
   return (
@@ -32,19 +29,10 @@ const Header = () => {
         </NavLink>
         <div className="flex gap-5">
           <Button.Primary onClick={openLoginModal}>Sign In</Button.Primary>
-          <Button.Secondary onClick={openRegisterModal}>Join Us</Button.Secondary>
+          <Button.Secondary onClick={openRegisterModal}>
+            Join Us
+          </Button.Secondary>
         </div>
-        <IconButton
-          variant="text"
-          className="lg:hidden"
-          onClick={() => setOpenNav(!openNav)}
-        >
-          {openNav ? (
-            <XMarkIcon className="h-6 w-6" strokeWidth={2} />
-          ) : (
-            <Bars3Icon className="h-6 w-6" strokeWidth={2} />
-          )}
-        </IconButton>
       </div>
     </Navbar>
   );
